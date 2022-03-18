@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
+:root {
+  --background: #010326;
+  --white: #fff;
+  --red: #ff4843;
+  --blue: #8985f2;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 125px;
+  color: var(--white);
+}
+
+.show {
+  animation: glow-show 0.8s ease-in-out infinite alternate;
+}
+
+.code {
+  text-align: center;
+  animation: glow-code 0.8s ease-in-out infinite alternate;
+}
+
+.circle {
+  width: 126.39px;
+  height: 68.76px;
+  background-color: var(--white);
+  border-radius: 50px;
+  animation: circle-code 0.8s ease-in-out infinite alternate;
+  margin: 0 12px;
+}
+
+span {
+  display: inline-block;
+}
+
+.circle-red {
+  animation: circle-glow-red 0.8s ease-in-out infinite alternate;
+}
+
+.circle-blue {
+  animation: circle-glow-blue 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes glow-show {
+  from {
+    text-shadow: 0 0 10px var(--white), 0 0 20px var(--white),
+      0 0 30px var(--blue), 0 0 40px var(--blue), 0 0 50px var(--blue),
+      0 0 60px var(--blue), 0 0 30px var(--blue);
+  }
+
+  to {
+    text-shadow: 0 0 20px var(--white), 0 0 30px var(--blue),
+      0 0 40px var(--blue), 0 0 50px var(--blue), 0 0 60px var(--blue),
+      0 0 70px var(--blue), 0 0 80px var(--blue);
+  }
+}
+
+@keyframes circle-glow-blue {
+  from {
+    box-shadow: 0 0 10px var(--white), 0 0 20px var(--white),
+      0 0 30px var(--blue), 0 0 40px var(--blue), 0 0 50px var(--blue),
+      0 0 60px var(--blue), 0 0 70px var(--blue);
+  }
+
+  to {
+    box-shadow: 0 0 20px var(--white), 0 0 30px var(--blue),
+      0 0 40px var(--blue), 0 0 50px var(--blue), 0 0 60px var(--blue),
+      0 0 70px var(--blue), 0 0 80px var(--blue);
+  }
+}
+
+@keyframes glow-code {
+  from {
+    text-shadow: 0 0 10px var(--white), 0 0 20px var(--white),
+      0 0 30px var(--red), 0 0 40px var(--red), 0 0 50px var(--red),
+      0 0 60px var(--red), 0 0 70px var(--red);
+  }
+
+  to {
+    text-shadow: 0 0 20px var(--white), 0 0 30px var(--red), 0 0 40px var(--red),
+      0 0 50px var(--red), 0 0 60px var(--red), 0 0 70px var(--red),
+      0 0 80px var(--red);
+  }
+}
+
+@keyframes circle-glow-red {
+  from {
+    box-shadow: 0 0 10px var(--white), 0 0 20px var(--white),
+      0 0 30px var(--red), 0 0 40px var(--red), 0 0 50px var(--red),
+      0 0 60px var(--red), 0 0 70px var(--red);
+  }
+
+  to {
+    box-shadow: 0 0 20px var(--white), 0 0 30px var(--red), 0 0 40px var(--red),
+      0 0 50px var(--red), 0 0 60px var(--red), 0 0 70px var(--red),
+      0 0 80px var(--red);
+  }
+}
