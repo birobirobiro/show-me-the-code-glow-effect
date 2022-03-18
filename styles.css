@@ -17,6 +17,7 @@ body {
   font-family: "JetBrains Mono", monospace;
   font-size: 125px;
   color: var(--white);
+  overflow: hidden;
 }
 
 .show {
